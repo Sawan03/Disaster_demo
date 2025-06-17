@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disaster Response App</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h1>🌍 Disaster Dashboard</h1>
+      <nav>
+        <ul>
+          <li><a href="#report">📢 Report Disaster</a></li>
+          <li><a href="#disasters">📋 View Disasters</a></li>
+          <li><a href="#resources">📦 Nearby Resources</a></li>
+          <li><a href="#social">📲 Social Media</a></li>
+        </ul>
+      </nav>
+      <footer>
+        <p>&copy; 2025 Disaster System</p>
+      </footer>
+    </aside>
+
+    <main class="content">
+      <section class="form-section" id="report">
+        <h2>📢 Report a Disaster</h2>
+        <form id="disasterForm">
+          <input type="text" id="title" placeholder="Disaster Title" required />
+          <input type="text" id="location_name" placeholder="Location Name" required />
+          <textarea id="description" placeholder="Brief Description" rows="4"></textarea>
+          <button type="submit">Submit Report</button>
+        </form>
+      </section>
+
+      <section class="list-section" id="disasters">
+        <h2>📋 Reported Disasters</h2>
+        <ul id="disasterList" class="list"></ul>
+      </section>
+
+      <section class="form-section" id="resources">
+        <h2>📍 Find Nearby Resources</h2>
+        <form id="resourceForm">
+          <input type="number" step="any" id="lat" placeholder="Latitude" required />
+          <input type="number" step="any" id="lon" placeholder="Longitude" required />
+          <button type="submit">Search Resources</button>
+        </form>
+        <ul id="resourceList" class="list"></ul>
+      </section>
+
+      <section class="list-section" id="social">
+        <h2>📲 Social Media Alerts</h2>
+        <ul id="socialList" class="list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

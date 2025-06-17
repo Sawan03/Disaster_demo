@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  color: #333;
+  background-color: #f8fafc;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #1e293b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #38bdf8;
+}
+
+.sidebar footer {
+  margin-top: auto;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Main Content Area */
+.content {
+  margin-left: 270px;
+  padding: 30px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 10px;
+  color: #1e40af;
+}
+
+/* Forms */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #0f766e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0d9488;
+}
+
+/* List Items */
+.list li {
+  background: #f3f4f6;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Only show active section */
+main .form-section,
+main .list-section {
+  display: none;
+}
+
+main .active-section {
+  display: block;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .sidebar nav ul li {
+    margin: 10px 0;
+  }
+
+  .sidebar footer {
+    display: none;
+  }
+}
